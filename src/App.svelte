@@ -7,7 +7,6 @@
 	function getTailwindValue(px) {
 		if( px < 1 ) return px;
 		const theoreticalValue = rem * 4;
-		console.log(theoreticalValue)
 		const possibleValues = [0.5, 1, 1.5, 2, 2.5, 3, 3.5, 4, 5, 6, 7, 8 ,9, 10, 11, 12, 14, 16, 20, 24 ,28, 32, 36, 40, 44, 48, 52, 56, 60, 64, 72, 80, 96];
 		if ( possibleValues.includes(theoreticalValue) ) return theoreticalValue;
 		const closest = possibleValues.sort((a, b) => { return Math.abs(theoreticalValue - a) - Math.abs(theoreticalValue - b) })[0]
@@ -43,7 +42,6 @@
 <style>
 	main {
 		text-align: center;
-		padding: 1em;
 		height: 100vh;
 		display: flex;
 		align-items: center;
